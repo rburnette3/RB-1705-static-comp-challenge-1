@@ -22,24 +22,94 @@ main {
 }
 
 .image-container {
+  display: flex;
   background-image: url(assets/chewie.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   float: right;
+  position: relative;
   width: 40%;
   height: 100vh;
+  align-items: center;
 }
 
+.arrow-button-container {
+  position: absolute;
+  top: 75%;
+  height: 50px;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+.arrow-button {
+  background: none;
+  height: 50px;
+  width: 50px;
+  border: 0;
+  margin: 0 15px;
+}
+
+.left-arrow-button {
+  background-image: url(assets/1705-static-comp-1/svg/002-left-arrow.svg);
+  background-size: contain;
+  background-position: center;
+}
+
+.right-arrow-button {
+  background-image: url(assets/1705-static-comp-1/svg/001-right-arrow.svg);
+  background-size: contain;
+  background-position: center;
+}
 .heading-box {
+  background-color: #63B2DD;
   height: 33.333%;
   width: 66.666%;
-  border: 2px solid black;
-
 }
+
 .box {
   height: 33.333%;
   width: 33.333%;
-  border: 2px solid black;
+  background-position: center;
+  background-size: 35%;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
 
+.profile-box {
+  background-color: #4C1D2E;
+  background-image: url(assets/1705-static-comp-1/svg/008-profile.svg);
+}
+
+.experience-box {
+  background-color: #0181C5;
+  background-image: url(assets/1705-static-comp-1/svg/006-transport.svg);
+}
+
+.education-box {
+  background-color: #093A5B;
+  background-image: url(assets/1705-static-comp-1/svg/005-education.svg);
+}
+
+.blog-box {
+  background-color: #63B2DD;
+  background-image: url(assets/1705-static-comp-1/svg/004-blog.svg);
+}
+
+.social-box {
+  background-color: #CBC2B7;
+  background-image: url(assets/1705-static-comp-1/svg/social.svg);
+}
+
+.contact-box {
+  background-color: #4C1D2E;
+  background-image: url(assets/1705-static-comp-1/svg/009-contact.svg);
+}
+
+.portfolio-box {
+  background-color: #CBC2B7;
+  background-image: url(assets/1705-static-comp-1/svg/007-portfolio.svg);
 }
