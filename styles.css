@@ -16,9 +16,9 @@ main {
   height: 100%;
   background-image:url(assets/space.jpg);
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-blend-mode: lighten;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .box-container {
@@ -40,6 +40,7 @@ main {
   width: 40%;
   height: 100vh;
   align-items: center;
+  z-index: 1;
 }
 
 .arrow-button-container {
@@ -49,6 +50,7 @@ main {
   width: 100%;
   display:flex;
   justify-content: space-between;
+  z-index: 0;
 }
 
 .arrow-button {
@@ -57,16 +59,17 @@ main {
   width: 50px;
   border: 0;
   margin: 0 15px;
+  z-index: 0;
 }
 
 .left-arrow-button {
   background-image: url(assets/1705-static-comp-1/svg/002-left-arrow.svg);
   background-size: contain;
   background-position: center;
+
 }
 
 .right-arrow-button {
-
   background-image: url(assets/1705-static-comp-1/svg/001-right-arrow.svg);
   background-size: contain;
   background-position: center;
@@ -97,6 +100,7 @@ h1 {
 .heading-button-container{
   height: 45px;
   width: 300px;
+  margin-top: 10px;
   margin-left: 30px;
   display: flex;
   align-content: space-between;
@@ -119,6 +123,13 @@ h1 {
   background-repeat: no-repeat;
   background-size: 15px;
   cursor: pointer;
+}
+
+.heading-buttons:hover
+{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .resume-button {
@@ -152,7 +163,10 @@ h1 {
 
 .box:hover {
   opacity: .70;
+
 }
+
+
 
 .article-text {
   position: absolute;
@@ -166,10 +180,6 @@ h1 {
   background-image: url(assets/008-profile.svg);
 }
 
-.profile-box:hover {
-  background-color: #4C1D2E;
-  opacity: .10;
-}
 
 .experience-box {
   background-color: #0181C5;
@@ -306,7 +316,7 @@ h1 {
 @media (max-width: 500px){
   .box {
     display: flex;
-    height: 20%;
+    height: 25%;
     width: 100%;
     background-size: 15%;
     font-size: 12px;
@@ -324,7 +334,7 @@ h1 {
 
     .box {
       display: flex;
-      height: 20%;
+      height: 25%;
       width: 100%;
       background-size: 15%;
       font-size: 12px;
