@@ -10,7 +10,7 @@ For the styling of the comp the web application COOLORS was used to determine th
 
 #### Original Comp
 
-![original comp](assets/Screen Shot 2017-05-23 at 5.59.00 AM.png)
+![original comp](https://github.com/rburnette3/RB-1705-static-comp-challenge-1/blob/master/assets/Screen%20Shot%202017-05-23%20at%205.59.00%20AM.png
 #### Final Comp
 
 ![original comp](assets/Screen Shot 2017-05-23 at 6.00.37 AM.png)
