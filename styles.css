@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
 }
-body, html, section, main, div, aside {
+body, html, section, main, div, aside, p {
   margin: 0;
   border: 0;
   padding: 0;
@@ -15,10 +15,10 @@ main {
   width: 100%;
   height: 100%;
   background-image:url(assets/space.jpg);
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   background-blend-mode: lighten;
-  object-fit: cover;
-  z-index: 1;
 }
 
 .box-container {
@@ -40,7 +40,6 @@ main {
   width: 40%;
   height: 100vh;
   align-items: center;
-  z-index: 1;
 }
 
 .arrow-button-container {
@@ -50,7 +49,6 @@ main {
   width: 100%;
   display:flex;
   justify-content: space-between;
-  z-index: 0;
 }
 
 .arrow-button {
@@ -59,21 +57,30 @@ main {
   width: 50px;
   border: 0;
   margin: 0 15px;
-  z-index: 0;
+}
+
+.arrow-button:focus {
+outline: none;
+}
+
+.arrow-button:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .left-arrow-button {
-  background-image: url(assets/1705-static-comp-1/svg/002-left-arrow.svg);
+  background-image: url(assets/002-left-arrow.svg);
   background-size: contain;
   background-position: center;
-
 }
 
 .right-arrow-button {
-  background-image: url(assets/1705-static-comp-1/svg/001-right-arrow.svg);
+  background-image: url(assets/001-right-arrow.svg);
   background-size: contain;
   background-position: center;
 }
+
 .heading-box {
   background-color: #63B2DD;
   height: 33.333%;
@@ -85,48 +92,49 @@ main {
 
 h1 {
   padding: 30px 0 0 30px;
-  font-size: 72px;
+  font-size: 96px;
   margin: 0;
   font-family: 'Kanit', sans-serif;
 }
 
 .heading-text-container {
   padding-left: 30px;
-  margin: 0;
+  padding-top: 30px;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
 }
 
-.heading-button-container{
+.heading-button-container {
   height: 45px;
-  width: 300px;
-  margin-top: 10px;
-  margin-left: 30px;
+  width: 100%;
+  padding: 30px 0 0 30px;
   display: flex;
   align-content: space-between;
 }
 
-.heading-text {
-  margin-bottom: 0px;
-  margin-top: 0px;
+.top-line {
+  margin-bottom: 10px;
 }
 
 .heading-buttons {
   border: solid 2px #FFFFFF;
   background-color: #63B2DD;
   color: #FFFFFF;
-  font-size: 12px;
-  height: 40px;
-  width: 125px;
+  font-size: 16px;
+  height: 60px;
+  width: 175px;
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   background-repeat: no-repeat;
-  background-size: 15px;
+  background-size: 18px;
   cursor: pointer;
 }
 
-.heading-buttons:hover
-{
+.heading-buttons:focus {
+outline: none;
+}
+
+.heading-buttons:hover{
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -134,16 +142,14 @@ h1 {
 
 .resume-button {
   background-image: url(assets/inbox.svg);
-  background-position: 18px 8px;
+  background-position: 35px 17px;
 }
-
-
 
 .contact-button {
   margin-left: 25px;
   background-image: url(assets/information.svg);
   background-position: left;
-  background-position: 15px 9px;*/
+  background-position: 30px 17px;
 }
 
 .box {
@@ -163,23 +169,20 @@ h1 {
 
 .box:hover {
   opacity: .70;
-
 }
-
-
 
 .article-text {
   position: absolute;
   text-align: center;
   bottom: 40px;
   font-family:'Roboto', sans-serif;
+  font-size: 18px;
 }
 
 .profile-box {
   background-color: #4C1D2E;
   background-image: url(assets/008-profile.svg);
 }
-
 
 .experience-box {
   background-color: #0181C5;
@@ -189,7 +192,6 @@ h1 {
 .education-box {
   background-color: #093A5B;
   background-image: url(assets/005-education.svg);
-
 }
 
 .blog-box {
@@ -212,7 +214,7 @@ h1 {
   background-image: url(assets/007-portfolio.svg);
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1300px){
   main{
   display: flex;
   flex-direction: column-reverse;
@@ -221,6 +223,21 @@ h1 {
   H1{
     font-size: 80px;
     padding-top: 0px;
+  }
+
+  .heading-buttons {
+    font-size: 14px;
+    height: 40px;
+    width: 165px;
+    background-size: 16px;
+  }
+
+  .resume-button {
+    background-position: 35px 9px;
+  }
+
+  .contact-button {
+    background-position: 32px 9px;
   }
 
   .image-container{
@@ -249,6 +266,44 @@ h1 {
 
 }
 
+@media (max-width: 975px) {
+
+  h1 {
+    font-size: 70px;
+    padding-top: 20px;
+  }
+
+  .heading-text-container {
+    font-size: 16px;
+  }
+
+  .heading-buttons {
+    font-size: 14px;
+    height: 40px;
+    width: 165px;
+    background-size: 16px;
+  }
+
+  .resume-button {
+    background-position: 35px 9px;
+  }
+
+  .contact-button {
+    background-position: 32px 9px;
+}
+
+@media (max-width: 875px) {
+
+  .heading-text-container {
+    font-size: 16px;
+    padding-top: 15px;
+  }
+
+  .heading-button-container {
+    padding-top: 15px;
+  }
+}
+
 @media (max-width: 675px){
 
   H1{
@@ -257,7 +312,7 @@ h1 {
   }
 
   .heading-text-container {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .article-text {
@@ -280,9 +335,14 @@ h1 {
     padding-left: 0px;
   }
 
+  .top-line {
+    margin-top: 0px;
+  }
+
   .heading-button-container {
     margin:auto;
     justify-content: center;
+    padding-left: 0px;
   }
 
   .heading-buttons {
@@ -308,34 +368,61 @@ h1 {
     background-size: 15%;
   }
 
+  .box:hover{
+    opacity: 1.0;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
   .article-text {
-    bottom: 1px;
+    bottom: 10px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 500px){
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .heading-text-container {
+    font-size: 12px;
+  }
+
   .box {
     display: flex;
     height: 25%;
     width: 100%;
     background-size: 15%;
-    font-size: 12px;
+
   }
 
   .article-text {
-    bottom: 2px;
+    bottom: 15px;
+  }
+
   }
 
   @media (max-width: 400px){
 
     h1 {
-      font-size: 60px;
+      font-size: 50px;
+    }
+
+    .heading-text-container {
+      font-size: 12px;
     }
 
     .box {
       display: flex;
       height: 25%;
       width: 100%;
-      background-size: 15%;
+      background-size: 20%;
       font-size: 12px;
+    }
+
+    .article-text {
+      bottom: 15px;
     }
